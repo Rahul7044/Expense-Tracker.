@@ -1,14 +1,19 @@
-function ExpenseItem(){
-    return(
-        <div>
-            
-            <div>March 12th 2021</div>
-            <div>
-                <div>Food Rs 10</div>
-                <div>Petrol Rs 100</div>
-                <div>Movies Rs 200</div>
-            </div>
+import React from 'react';
 
+import './ExpenseItem.css';
+import ExpenseDate from './ExpenseDate';
+
+
+function ExpenseItem(props){
+    
+    return(
+        <div className ="expense-item">
+            <ExpenseDate date = {props.date} />
+            
+            <div className="expense-item__description">
+                <h2>{props.title}</h2>
+                <div className="expense-item__price">Rs{ props.amount}</div>
+            </div>
         </div>
     );
 }
