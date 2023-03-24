@@ -29,6 +29,7 @@ const ExpenseForm = (props) => {
 
         
 
+        
         console.log(expenseData);
 
         setEnteredTitle('');
